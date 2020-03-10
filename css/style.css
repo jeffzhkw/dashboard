@@ -13,9 +13,21 @@ body{
   flex-direction: column;
 }
 
-hr{
+h1{
+  font-size: 20vh;
+  font-family: "Nunito Sans";
+  margin-top: 0.1vh;
+  margin-bottom: 0.1vh;
 
 }
+h2{
+  font-size: 30pt;
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+  font-family: "Open Sans"
+}
+
+
 
 .navBar{
   display: grid;
@@ -70,23 +82,103 @@ hr{
   background-image: url("../static/emoji.jpg")
 }
 
+.curr {
+  display: flex;
 
-h1{
-  font-size: 120pt;
-  font-family: "Nunito Sans";
-  margin-top: 1vh;
-  margin-bottom: 1vh;
+
+}
+.curr .left{
+  display: grid;
+  width: 50vw;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto auto;
+}
+
+.left h3{
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
+
+}
+
+.size{
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+
+.family{
+  grid-column: 2 / 3;
+  grid-row: 2 /3
+}
+
+.curr .right{
+  width: 50vw;
+
+}
+
+.platter{
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: 25% 25% 25% 25%;
+
+}
+
+.platter div{
+  transition-duration: 0.3s;
+
+}
+
+.platter div:hover{
+  transform: scale(1.2);
+  transition-duration: 0.3s;
+  border: 1px solid black;
+
+}
+
+#c00{
+  background-color: rgb(248, 219, 104);
+
+}
+
+#c01{
+  background-color: rgb(241, 220, 152);
+
+}
+#c02{
+  background-color: rgb(101, 180, 204);
+
+}
+#c03{
+  background-color: rgb(237, 147, 63);
+
+}
+#c10{
+  background-color: rgb(242, 184, 110);
+
+}
+#c11{
+  background-color: rgb(212, 80, 38);
+
+}
+#c12{
+  background-color: rgb(219, 151, 109);
+
+}
+
+.curr .misc{
 
 }
 
 
 
-h2{
-  font-size: 100pt;
-  margin-top: 0.8em;
-  margin-bottom: 0.8em;
-  font-family: "Open Sans"
-}
+
+
+
+
+
+
+
 h3{
   font-size: 80pt;
   margin-top: 0.6em;
@@ -153,36 +245,7 @@ p{
 }
 
 
-#c01{
-  background-color: rgb(248, 219, 104);
-
-}
-
-#c02{
-  background-color: rgb(241, 220, 152);
-
-}
-#c03{
-  background-color: rgb(101, 180, 204);
-
-}
-#c04{
-  background-color: rgb(237, 147, 63);
-
-}
-#c05{
-  background-color: rgb(242, 184, 110);
-
-}
-#c06{
-  background-color: rgb(212, 80, 38);
-
-}
-#c07{
-  background-color: rgb(219, 151, 109);
-
-}
-#c08{
+/* #c08{
   background-color: rgb(249, 244, 231);
   width: 500px;
   height: 500px;
@@ -199,4 +262,4 @@ p{
   background-color: rgb(33,38,44);
   width: 500px;
   height: 500px;
-}
+} */
