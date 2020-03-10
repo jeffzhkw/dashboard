@@ -83,12 +83,15 @@ h2{
 }
 
 .curr {
-  display: flex;
+  display: grid;
+  grid-template-columns: 50%, 50%;
+  grid-template-rows: auto auto;
 
 
 }
 .curr .left{
   display: grid;
+  grid-column-start: 1;
   width: 50vw;
   grid-template-columns: 50% 50%;
   grid-template-rows: auto auto;
@@ -112,6 +115,7 @@ h2{
 
 .curr .right{
   width: 50vw;
+  grid-column-start: 2;
 
 }
 
@@ -126,7 +130,10 @@ h2{
 
 .platter div{
   transition-duration: 0.3s;
+}
 
+.platter span{
+  display: none;
 }
 
 .platter div:hover{
@@ -134,7 +141,15 @@ h2{
   transition-duration: 0.3s;
   border: 1px solid black;
 
+
 }
+
+.platter div:hover + span{
+  display: block;
+}
+
+
+
 
 #c00{
   background-color: rgb(248, 219, 104);
@@ -166,7 +181,25 @@ h2{
 
 }
 
+
+#c20{
+  background-color: rgb(249, 244, 231);
+  grid-column: 1 / 3;
+  grid-row: 3 / 5;
+
+}
+#c22{
+  background-color: rgb(131, 135, 138);
+  grid-column: 3 / 5;
+  grid-row: 3 / 5;
+
+}
+
+
+
 .curr .misc{
+  grid-column-start: 1;
+  grid-row-start: 2;
 
 }
 
@@ -176,7 +209,20 @@ h2{
 
 
 
+.board div{
+  width: 80vw;
+  margin: 10vw;
+  border: 4px dashed black;
+  transition-duration: 0.3s;
 
+}
+
+.board div:hover{
+  transform: scale(0.98);
+  border: 5px solid black;
+  transition-duration: 0.3s;
+
+}
 
 
 h3{
@@ -243,23 +289,3 @@ p{
   text-decoration: underline;
   transition-duration: 0.25s;
 }
-
-
-/* #c08{
-  background-color: rgb(249, 244, 231);
-  width: 500px;
-  height: 500px;
-
-}
-#c09{
-  background-color: rgb(131, 135, 138);
-  width: 500px;
-  height: 500px;
-
-}
-
-#c10{
-  background-color: rgb(33,38,44);
-  width: 500px;
-  height: 500px;
-} */
