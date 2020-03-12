@@ -143,9 +143,6 @@ hr {
 
 
 }
-.title img:hover{
-  border: 1px black solid;
-}
 
 .curr {
   display: grid;
