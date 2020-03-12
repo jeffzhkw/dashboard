@@ -50,7 +50,7 @@ h2{
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 
 
@@ -62,31 +62,72 @@ h2{
   padding: 4pt;
 }
 
+.back{
+  transition-duration: 0.5s;
+  height: 100%;
+  display:flex;
+  align-items: center;
+  font-size: 30pt;
+  font-family: monospace;
+  color: white;
+  text-decoration: none;
+  margin-left: 50pt;
+
+}
+a{
+  text-decoration: none;
+  color: white;
+}
+a:visited{
+  text-decoration: none;
+}
+a:hover{
+  color: black;
+}
+.back:hover{
+  transition-duration: 0.5s;
+  background-color: white;
+  color: black;
+  margin-left: 30pt;
+}
+
+hr {
+  border: 0;
+  clear:both;
+  display:block;
+  width: 96%;
+  background-color:#21262C;
+  height: 1px;
+}
+
 .navButton a{
   font-size: 20pt;
   font-family: "Open Sans";
   color: grey;
   text-decoration: none;
+  border-radius: 2pt;
+  border: 1px solid black;
 
 }
 
 .navButton:hover{
+  border-radius: 0pt;
   background-color: white;
   color: black;
   transition-duration: 0.5s;
 }
 
-.logo{
-  grid-column-start: 2;
-  grid-column-end: 3;
+.navBar img{
+  grid-column-start: 3;
+  grid-column-end: 4;
   height:5vh;
   width: 5vh;
-  background-image: url("../static/emoji.jpg")
+  background-image: url("static/emoji.jpg")
 }
 
 .curr {
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 50vw 50vw;
   grid-template-rows: auto auto;
 
 
@@ -123,8 +164,54 @@ h2{
 }
 .family{
   grid-column: 2 / 3;
-  grid-row: 2 /3
+  grid-row: 2 /3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
+.family > div{
+  height: 15vmin;
+  width: 15vmin;
+}
+
+.fWrapper{
+  margin: 3vmin;
+}
+.fWrapper > div{
+  display: flex;
+  height: 100%;
+  width: 100%;
+  border: 3px solid black;
+}
+
+.fWrapper > span{
+
+}
+
+#f01{
+  font-family: Georgia;
+  font-size: 10vmin;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+#f02{
+  font-family: "Lato";
+  font-size: 10vmin;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+#f03{
+
+  font-family: "Roboto";
+  font-size: 10vmin;
+  justify-content: center;
+  align-items: flex-end;
+
+}
+
 
 .curr .right{
   width: 50vw;
@@ -233,11 +320,32 @@ h2{
 
 
 
-.curr .misc{
-  grid-column-start: 1;
+.misc{
+  grid-column-start: 1 / 4;
   grid-row-start: 2;
 
+  display: grid;
+  grid-template-columns:  50vw 50vw;
+  grid-template-rows: auto auto;
 }
+
+.misc h3{
+  grid-column-start: 1;
+  grid-row-start: 1;
+}
+
+.button {
+  grid-column: 1 / 2;
+  grid-row: 2/ 3;
+
+}
+
+.list{
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+
 
 
 
